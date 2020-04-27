@@ -1,0 +1,85 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 420px;
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: thin;
+    box-sizing: border-box;
+    position: relative;
+}
+
+input, select, textarea {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 0;
+    border-color: blue;
+}
+
+input, textarea {
+    margin: 0 10px;
+}
+
+select {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.other {
+    background-color: lightgrey;
+    color: black;
+}
+.study {
+    background-color: lightblue;
+    color: black;
+}
+.home {
+    background-color: yellow;
+    color: black;
+}
+.sport {
+    background-color: green;
+    color: black;
+}
+
+textarea {
+    height: 200px;
+}
+
+.btns_div {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.btn_1 {
+    padding: 5px 25px;
+    margin-right: 40px;
+    margin-left: 100px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
+.btn_2 {
+    padding: 5px 18px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    color: white;
+}
+
+
+
