@@ -17,21 +17,25 @@ code {
 #root {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  box-sizing: border-box;
 }
 
 .other {
-  background-color: lightgrey;
+  background-color: #ADADAD;
   color: black;
 }
 .study {
-  background-color: lightblue;
+  background-color: #F98804;
   color: black;
 }
 .home {
-  background-color: yellow;
+  background-color: #1219AF;
   color: black;
 }
 .sport {
-  background-color: green;
+  background-color: #159021;
   color: black;
 }

@@ -3,15 +3,15 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 420px;
+    height: 450px;
+    width: 383px;
     padding: 10px;
-    margin: 20px;
-    width: 400px;
-    border-radius: 20px;
+    border-radius: 10px;
     border-style: solid;
     border-width: thin;
     box-sizing: border-box;
     position: relative;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
 input, select, textarea {
@@ -28,29 +28,13 @@ input:focus, select:focus, textarea:focus {
 }
 
 input, textarea {
-    margin: 0 10px;
+    margin: 30px 10px;
+    width: 340px;
 }
 
 select {
     text-transform: uppercase;
-    margin: 10px 0;
-}
-
-.other {
-    background-color: lightgrey;
-    color: black;
-}
-.study {
-    background-color: lightblue;
-    color: black;
-}
-.home {
-    background-color: yellow;
-    color: black;
-}
-.sport {
-    background-color: green;
-    color: black;
+    margin: 0;
 }
 
 textarea {
@@ -58,6 +42,7 @@ textarea {
 }
 
 .btns_div {
+    box-sizing: border-box;
     width: 80%;
     display: flex;
     justify-content: center;

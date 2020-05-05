@@ -3,5 +3,9 @@
     /*border: thin solid black;*/
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
     padding: 10px;
+    display: flex;
 }
 
+.todocomp > div:first-child {
+    flex: 1;
+}

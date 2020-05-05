@@ -4,7 +4,7 @@ export class Api {
       "Content-Type": "application/json"
     }
   };
-  serverURL = "http://192.168.0.101:3001";
+  serverURL = "http://localhost:3002";
   constructor(options = {}) {
     this.options = {
       ...this.options,
@@ -40,7 +40,6 @@ export class Api {
   static delete(endpoint, data) {
     const api = new Api({
       method: "DELETE",
-      body: JSON.stringify(data)
     });
     return api.request(endpoint);
   }

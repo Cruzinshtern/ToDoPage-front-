@@ -6,9 +6,7 @@ function ToDoList({todos, ...props}) {
 
   return(
     <div className={style.list}>
-      <div id="todolist">
         {todos.map(todo => <ToDoComponent key={todo.id} todo={todo} {...props} />)}
-      </div>
     </div>
   )
 }

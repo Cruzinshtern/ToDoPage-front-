@@ -7,7 +7,7 @@ const Form = ({onSubmit, item}) =>  {
   function handleClick (e) {
     e.preventDefault();
     const data = {
-      id: uuid(),
+      id: !!item ? item.id : uuid(),
       title: e.target.elements.title.value,
       type: e.target.elements.type.value.toLowerCase(),
       description: e.target.elements.description.value
@@ -30,7 +30,7 @@ const Form = ({onSubmit, item}) =>  {
         </select>
         <textarea placeholder="Describe you activity..." name="description" defaultValue={item ? item.description: ""}/>
         <div className={style.btns_div}>
-          <button className={style.btn_1} type="submit">SAVE</button>
+          <button className={style.btn_1} type="submit">{item ? "UPDATE" : "SAVE"}</button>
           <button className={style.btn_2} type="reset">CANCEL</button>
         </div>
       </form>

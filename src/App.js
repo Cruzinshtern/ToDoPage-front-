@@ -19,21 +19,38 @@ function App() {
     }, []
   );
 
-  const addNewTodo = async (todo) => {
-    const data = await Todos.addTodo(todo);
-    console.log(data);
-    setTodos(data.data);
+  const handleSubmit = async (todo) => {
+    let response;
+    if(!!editableItem) {
+      response = await Todos.editTodo(todo);
+      setEditableItem(null);
+    } else {
+      response = await Todos.addTodo(todo)
+    }
+    setTodos(response.data);
   };
-  const clearList = () => {
-    setTodos([])
+
+   /**
+   * TODO:make it function the right way
+   * */
+  const clearList = async () => {
+    const data = await Todos.deleteAllTodos();
+    setTodos(data.data)
+  };
+
+  const deleteTodo = async (id) => {
+    const data = await Todos.deleteTodo(id);
+    setTodos(data.data);
   };
 
   return (
-    <div className="wrapper">
-      <ToDoList todos={todos} onEdit={setEditableItem} />
-      <Form onSubmit={addNewTodo} item={editableItem} />
-      <ClearList onReset={clearList}/>
-    </div>
+    <>
+      <ToDoList todos={todos} onEdit={setEditableItem} onDelete={deleteTodo}/>
+      <div>
+        <Form onSubmit={handleSubmit} item={editableItem} />
+        <ClearList onReset={clearList}/>
+      </div>
+    </>
   );
 }
 
